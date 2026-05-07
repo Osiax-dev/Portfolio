@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio d'Osiax Tcheoubi — Étudiant L3 Informatique de Gestion, IUT Parakou, Bénin. Développeur web HTML, CSS, JavaScript, PHP, SQL." />
+  <title>Osiax Tcheoubi — Portfolio IUT Parakou</title>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPY3Y83GMG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LPY3Y83GMG');
+</script> 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- NETLIFY FORMS : déclaration cachée obligatoire -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text"  name="nom" />
+    <input type="email" name="email" />
+    <input type="text"  name="sujet" />
+    <textarea           name="message"></textarea>
+  </form>
+</head>
+<body>
+
+  <!-- Curseur custom (desktop) -->
+  <div class="cur cur-dot" id="cur-dot"></div>
+  <div class="cur cur-ring" id="cur-ring"></div>
+  <div class="glow" id="glow"></div>
+
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  <nav aria-label="Navigation principale">
+    <div class="nav-brand">&lt;<span>dev</span>/&gt;</div>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="nav-status">
+        <span class="dot-pulse"></span>
+        Disponible · 🇧🇯
+      </div>
+      <!-- Hamburger mobile -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation">
+    <a href="#about">À propos</a>
+    <a href="#skills">Stack</a>
+    <a href="#projects">Projets</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-badge">
+      <span class="dot-pulse"></span>
+      Étudiant L3 · IUT Parakou · 2026
+    </div>
+
+    <p class="hero-eyebrow">// Bonjour, je suis</p>
+
+    <h1 class="hero-name">
+      Osiax<br>
+      <span class="hl">Tcheoubi</span><span class="caret">_</span>
+    </h1>
+
+    <p class="hero-role">Étudiant en Informatique de Gestion · Développeur Web</p>
+
+    <p class="hero-uni">
+      Université de Parakou — Institut Universitaire de Technologie
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">→ Mes projets</a>
+
+      <a href="Osiax-Agossou-Missimahu-TCHEOUBI-CV.pdf" download class="btn btn-cv">
+        ⬇ Télécharger CV
+      </a>
+
+      <a href="https://wa.me/0148171199" target="_blank" rel="noopener" class="btn btn-wa">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.526 5.865L.057 23.761a.5.5 0 0 0 .614.614l5.896-1.469A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.692-.5-5.24-1.375l-.375-.219-3.882.968.985-3.77-.243-.389A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
+        </svg>
+        WhatsApp
+      </a>
+
+      <a href="https://www.linkedin.com/in/osiax-tcheoubi-b79684405?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="btn btn-li">
+        in LinkedIn
+      </a>
+
+      <a href="#contact" class="btn btn-ghost">✉ Email</a>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      Défiler pour explorer
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       01 · À PROPOS
+  ══════════════════════════════════════ -->
+  <section id="about" aria-labelledby="about-title">
+    <p class="s-label reveal">01 · À propos</p>
+    <h2 class="s-title reveal" id="about-title">Qui suis-je ?</h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        Étudiant en <strong>Licence 3 Informatique de Gestion</strong> à l'IUT de l'Université
+        de Parakou au Bénin, je développe des applications web fonctionnelles et bien structurées.
+        <br><br>
+        Ma formation allie <strong>logique informatique</strong> et <strong>vision gestion</strong> :
+        je conçois des outils qui répondent à de vraies problématiques métier avec un code propre
+        et maintenable.
+        <br><br>
+        Passionné par le développement web full-stack, je cherche à grandir à travers des
+        <strong>projets concrets</strong>, des stages et des collaborations enrichissantes.
+      </div>
+
+      <div class="about-card reveal">
+        <div class="acr">
+          <span class="acr-k">Formation</span>
+          <span class="acr-v"><span class="tag-green">L3 · Informatique de Gestion</span></span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">École</span>
+          <span class="acr-v">IUT Parakou</span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">Université</span>
+          <span class="acr-v">Université de Parakou</span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">Pays</span>
+          <span class="acr-v">🇧🇯 Bénin</span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">Email</span>
+          <span class="acr-v">osiaxdev899@gmail.com</span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">Statut</span>
+          <span class="acr-v"><span class="tag-green">Disponible — Stage / Projet</span></span>
+        </div>
+        <a href="https://wa.me/0148171199" target="_blank" rel="noopener"
+           class="btn btn-wa" style="width:100%; justify-content:center; margin-top:8px;">
+          💬 Contacter via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       02 · COMPÉTENCES
+  ══════════════════════════════════════ -->
+  <section class="skills-wrap" id="skills" aria-labelledby="skills-title">
+    <p class="s-label reveal">02 · Compétences</p>
+    <h2 class="s-title reveal" id="skills-title">Stack technique</h2>
+
+    <div class="tech-grid reveal">
+
+      <div class="tech-card">
+        <span class="tech-icon" aria-hidden="true">🌐</span>
+        <div class="tech-name">HTML</div>
+        <div class="tech-level">Avancé · 90%</div>
+        <div class="bar-bg"><div class="bar-fill" data-w="90"></div></div>
+        <div class="tech-desc">Structure sémantique, formulaires, HTML5, accessibilité.</div>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-icon" aria-hidden="true">🎨</span>
+        <div class="tech-name">CSS</div>
+        <div class="tech-level">Avancé · 75%</div>
+        <div class="bar-bg"><div class="bar-fill" data-w="85"></div></div>
+        <div class="tech-desc">Flexbox, Grid, responsive design, animations, variables CSS.</div>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-icon" aria-hidden="true">⚡</span>
+        <div class="tech-name">JavaScript</div>
+        <div class="tech-level">Intermédiaire · 58%</div>
+        <div class="bar-bg"><div class="bar-fill" data-w="78"></div></div>
+        <div class="tech-desc">DOM, ES6+, fetch API, logique applicative, interactivité.</div>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-icon" aria-hidden="true">🐘</span>
+        <div class="tech-name">PHP</div>
+        <div class="tech-level">Intermédiaire · 70%</div>
+        <div class="bar-bg"><div class="bar-fill" data-w="80"></div></div>
+        <div class="tech-desc">Back-end, sessions, CRUD, PDO, connexion BDD, sécurité.</div>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-icon" aria-hidden="true">🗄️</span>
+        <div class="tech-name">SQL / MySQL</div>
+        <div class="tech-level">Intermédiaire · 85%</div>
+        <div class="bar-bg"><div class="bar-fill" data-w="77"></div></div>
+        <div class="tech-desc">Requêtes complexes, jointures, modélisation Merise, MCD/MLD.</div>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-icon" aria-hidden="true">🔗</span>
+        <div class="tech-name">Full Stack Web</div>
+        <div class="tech-level">En progression · 68%</div>
+        <div class="bar-bg"><div class="bar-fill" data-w="75"></div></div>
+        <div class="tech-desc">HTML + CSS + JS + PHP + MySQL · Architecture MVC · Déploiement.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       03 · PROJETS
+  ══════════════════════════════════════ -->
+  <section id="projects" aria-labelledby="projects-title">
+    <p class="s-label reveal">03 · Projets</p>
+    <h2 class="s-title reveal" id="projects-title">Réalisations</h2>
+
+    <div class="proj-list reveal">
+
+      <div class="proj-item">
+        <span class="proj-num">001</span>
+        <div>
+          <div class="proj-name">Système de gestion de bibliotheque</div>
+          <div class="proj-tags">
+            <span class="proj-tag g">PHP</span>
+            <span class="proj-tag g">MySQL</span>
+            <span class="proj-tag g">HTML/CSS</span>
+            <span class="proj-tag">CRUD</span>
+            <span class="proj-tag">Login</span>
+          </div>
+        </div>
+        <span class="proj-arrow" aria-hidden="true">→</span>
+      </div>
+
+
+      <div class="proj-item">
+        <span class="proj-num">002</span>
+        <div>
+          <div class="proj-name">Site vitrine responsive</div>
+          <div class="proj-tags">
+            <span class="proj-tag g">HTML</span>
+            <span class="proj-tag g">CSS</span>
+            <span class="proj-tag g">JavaScript</span>
+            <span class="proj-tag">Responsive</span>
+          </div>
+        </div>
+        <span class="proj-arrow" aria-hidden="true">→</span>
+      </div>
+
+      <div class="proj-item">
+        <span class="proj-num">003</span>
+        <div>
+          <div class="proj-name">Modélisation base de données</div>
+          <div class="proj-tags">
+            <span class="proj-tag g">SQL</span>
+            <span class="proj-tag g">MySQL</span>
+            <span class="proj-tag">Merise</span>
+            <span class="proj-tag">MCD/MLD</span>
+          </div>
+        </div>
+        <span class="proj-arrow" aria-hidden="true">→</span>
+      </div>
+
+    </div>
+
+    <p class="reveal" style="margin-top:18px; font-size:.56rem; color:var(--muted); letter-spacing:.08em;">
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       04 · CV
+  ══════════════════════════════════════ -->
+  <section class="cv-section" id="cv" aria-labelledby="cv-title">
+    <p class="s-label reveal">04 · Curriculum Vitae</p>
+    <h2 class="s-title reveal" id="cv-title">Mon CV</h2>
+
+    <div class="cv-inner reveal">
+      <div>
+        <p class="cv-desc">
+          Télécharge mon CV complet pour découvrir mon parcours,
+          mes compétences et mes réalisations académiques.
+        </p>
+        <div class="cv-actions">
+          <a href="Osiax-Agossou-Missimahu-TCHEOUBI-CV.pdf" download class="btn btn-primary">
+            ⬇ Télécharger le CV (PDF)
+          </a>
+          <a href="Osiax-Agossou-Missimahu-TCHEOUBI-CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+            👁 Aperçu
+          </a>
+        </div>
+      </div>
+
+      <!-- Infos CV -->
+      <div class="about-card" style="border-color: rgba(0,214,143,.2);">
+        <div class="acr">
+          <span class="acr-k">Nom</span>
+          <span class="acr-v">Osiax Tcheoubi</span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">Niveau</span>
+          <span class="acr-v"><span class="tag-green">Licence 3</span></span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">Spécialité</span>
+          <span class="acr-v">Informatique de Gestion</span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">École</span>
+          <span class="acr-v">IUT Parakou</span>
+        </div>
+        <div class="acr">
+          <span class="acr-k">Format</span>
+          <span class="acr-v"><span class="tag-green">PDF · A4</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       05 · CONTACT — FORMULAIRE NETLIFY
+  ══════════════════════════════════════ -->
+  <section class="contact-wrap" id="contact" aria-labelledby="contact-title">
+    <p class="s-label reveal">05 · Contact</p>
+    <h2 class="s-title reveal" id="contact-title">Travaillons ensemble</h2>
+
+    <div class="contact-grid">
+
+      <!-- Liens directs -->
+      <div class="reveal">
+        <p class="contact-intro">
+          Tu as un projet, une idée, ou tu cherches un développeur motivé ?
+          Contacte-moi via le canal de ton choix.
+        </p>
+        <div class="clinks">
+          <a href="https://wa.me/0148171199" target="_blank" rel="noopener" class="clink">
+            <span class="ci">💬</span>
+            <span class="cl">
+              WhatsApp
+              <span class="cs">Réponse rapide · +229 0148171199</span>
+            </span>
+            <span class="ca">↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/osiax-tcheoubi-b79684405?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="clink">
+            <span class="ci">💼</span>
+            <span class="cl">
+              LinkedIn
+              <span class="cs">Profil professionnel</span>
+            </span>
+            <span class="ca">↗</span>
+          </a>
+          <a href="mailto:osiaxdev899@gmail.com" class="clink">
+            <span class="ci">✉</span>
+            <span class="cl">
+              Email
+              <span class="cs">osiaxdev899@gmail.com</span>
+            </span>
+            <span class="ca">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Formulaire Netlify -->
+      <div class="reveal">
+        <form
+          id="contact-form"
+          class="netlify-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          novalidate
+        >
+          <!-- Champ caché obligatoire Netlify -->
+          <input type="hidden" name="form-name" value="contact" />
+
+          <!-- Anti-spam honeypot (masqué) -->
+          <div style="display:none;">
+            <label>Ne pas remplir : <input name="bot-field" /></label>
+          </div>
+
+          <div class="fg">
+            <label class="fl" for="nom">Nom complet</label>
+            <input class="fi" id="nom" name="nom" type="text"
+                   placeholder="Jean Dupont" required autocomplete="name" />
+          </div>
+
+          <div class="fg">
+            <label class="fl" for="email">Email</label>
+            <input class="fi" id="email" name="email" type="email"
+                   placeholder="jean@exemple.com" required autocomplete="email" />
+          </div>
+
+          <div class="fg">
+            <label class="fl" for="sujet">Sujet</label>
+            <input class="fi" id="sujet" name="sujet" type="text"
+                   placeholder="Proposition de stage, projet web..." required />
+          </div>
+
+          <div class="fg">
+            <label class="fl" for="message">Message</label>
+            <textarea class="ft" id="message" name="message"
+                      placeholder="Décris ton projet ou ta demande..." required></textarea>
+          </div>
+
+          <button type="submit" class="fsub" id="form-submit">
+            → Envoyer le message
+          </button>
+
+          <!-- Messages retour -->
+          <div class="form-msg success" id="form-success">
+            ✓ Message envoyé ! Je te réponds bientôt à osiaxdev899@gmail.com
+          </div>
+          <div class="form-msg error" id="form-error">
+            ✗ Une erreur est survenue. Réessaie ou contacte-moi directement sur WhatsApp.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <span>© 2026 · Osiax Tcheoubi · IUT Parakou 🇧🇯</span>
+    <span>
+      <span class="dot-pulse"></span>
+      Disponible — Stage &amp; Missions
+    </span>
+    <span>HTML · CSS · JS · PHP · SQL</span>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
