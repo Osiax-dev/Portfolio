@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fill();
       });
 
-      // Lignes entre proches
       for (let i = 0; i < dots.length; i++) {
         for (let j = i + 1; j < dots.length; j++) {
           const dx = dots[i].x - dots[j].x;
@@ -144,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: .1 });
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  /* ── COMPTEUR HERO (typage) ── */
+  /* ── EFFET DE FRAPPE HERO ── */
   const roles = [
     'Développeur Web Full Stack',
     'Étudiant L3 · IUT Parakou',
@@ -186,28 +185,31 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.textContent = '⏳ Envoi en cours...';
       msgOk.style.display = msgErr.style.display = 'none';
 
-try {
-  await fetch('https://formspree.io/f/xlgzkayj', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(new FormData(form)).toString()
-  });
-
-  // On affiche toujours le succès — l'email arrive bien
-  msgOk.style.display   = 'block';
-  form.reset();
-  submitBtn.textContent = '✓ Message envoyé !';
-  setTimeout(() => {
-    submitBtn.textContent = '→ Envoyer le message';
-    submitBtn.disabled    = false;
-    msgOk.style.display   = 'none';
-  }, 5000);
-
-} catch {
-  msgErr.style.display  = 'block';
-  submitBtn.textContent = '→ Envoyer le message';
-  submitBtn.disabled    = false;
-}
+      fetch('https://formspree.io/f/xlgzkayj', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.ok) {
+          msgOk.style.display   = 'block';
+          form.reset();
+          submitBtn.textContent = '✓ Message envoyé !';
+          setTimeout(() => {
+            submitBtn.textContent = '→ Envoyer le message';
+            submitBtn.disabled    = false;
+            msgOk.style.display   = 'none';
+          }, 5000);
+        } else {
+          throw new Error();
+        }
+      })
+      .catch(() => {
+        msgErr.style.display  = 'block';
+        submitBtn.textContent = '→ Envoyer le message';
+        submitBtn.disabled    = false;
+      });
     });
   }
 
