@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(() => {
         msgErr.style.display  = 'block';
-        submitBtn.textContent = '→ Envoyer le message';
+        submitBtn.textContent = 'Envoyer le message';
         submitBtn.disabled    = false;
       });
     });
