@@ -146,9 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── EFFET DE FRAPPE HERO ── */
   const roles = [
     'Développeur Web Full Stack',
-    'Étudiant L3 · IUT Parakou',
     'PHP · Laravel · MySQL',
-    'Disponible pour un stage'
+    'UI Designer & Analyste',
+    'Basé à Parakou · 🇧🇯'
   ];
   const roleEl = document.querySelector('.hero-role');
   if (roleEl) {
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(() => {
         msgErr.style.display  = 'block';
-        submitBtn.textContent = 'Envoyer le message';
+        submitBtn.textContent = '→ Envoyer le message';
         submitBtn.disabled    = false;
       });
     });
