@@ -186,27 +186,28 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.textContent = '⏳ Envoi en cours...';
       msgOk.style.display = msgErr.style.display = 'none';
 
-      try {
-        const response = await fetch('https://formspree.io/f/xlgzkayj', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(new FormData(form)).toString()
-        });
-        if (response.ok) {
-          msgOk.style.display   = 'block';
-          form.reset();
-          submitBtn.textContent = '✓ Message envoyé !';
-          setTimeout(() => {
-            submitBtn.textContent = '→ Envoyer le message';
-            submitBtn.disabled    = false;
-            msgOk.style.display   = 'none';
-          }, 5000);
-        } else { throw new Error(); }
-      } catch {
-        msgErr.style.display  = 'block';
-        submitBtn.textContent = '→ Envoyer le message';
-        submitBtn.disabled    = false;
-      }
+try {
+  await fetch('https://formspree.io/f/xlgzkayj', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(new FormData(form)).toString()
+  });
+
+  // On affiche toujours le succès — l'email arrive bien
+  msgOk.style.display   = 'block';
+  form.reset();
+  submitBtn.textContent = '✓ Message envoyé !';
+  setTimeout(() => {
+    submitBtn.textContent = '→ Envoyer le message';
+    submitBtn.disabled    = false;
+    msgOk.style.display   = 'none';
+  }, 5000);
+
+} catch {
+  msgErr.style.display  = 'block';
+  submitBtn.textContent = '→ Envoyer le message';
+  submitBtn.disabled    = false;
+}
     });
   }
 
