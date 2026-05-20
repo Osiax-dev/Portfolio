@@ -402,6 +402,42 @@ section { padding: 88px var(--pad); position: relative; z-index: 1; }
 }
 .tech-desc { font-size: .6rem; color: var(--muted); margin-top: 12px; line-height: 1.6; }
 
+/* Catégorie label */
+.skills-cat {
+  font-size: .58rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 20px;
+}
+
+/* Grille 3 colonnes forcée */
+.tech-grid-3 { grid-template-columns: 1fr !important; }
+@media (min-width: 600px) { .tech-grid-3 { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (min-width: 900px) { .tech-grid-3 { grid-template-columns: repeat(3, 1fr) !important; } }
+
+/* Cartes accent (Design & Gestion) */
+.tech-card-accent {
+  border-color: rgba(37,99,235,.2);
+  background: linear-gradient(135deg, var(--card) 60%, rgba(37,99,235,.04));
+}
+.tech-card-accent:hover { border-color: rgba(96,165,250,.5); }
+
+/* Ligne déco en haut de la carte accent */
+.tech-card-line {
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue-bright), transparent);
+  opacity: 0; transition: opacity .4s;
+}
+.tech-card-accent:hover .tech-card-line { opacity: 1; }
+
+/* Tags tech */
+.tech-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 14px; }
+.ttag {
+  font-size: .46rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid rgba(37,99,235,.25);
+  color: var(--blue-bright);
+  background: rgba(37,99,235,.06);
+}
+
 /* ── PROJETS ── */
 .proj-list { display: flex; flex-direction: column; gap: 2px; }
 
