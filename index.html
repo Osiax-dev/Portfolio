@@ -4,8 +4,18 @@
   <meta name="google-site-verification" content="957ibxuHdzByg_oX_1d28BoDPrSYo8-8CPKK-Z9RQCw" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio d'Osiax Tcheoubi — Développeur Web Full Stack PHP · Laravel · MySQL · UI Design · Parakou, Bénin" />
-  <title>Osiax Tcheoubi — Développeur Web</title>
+  <meta name="description" content="Portfolio d'Osiax Tcheoubi — Développeur Web Full Stack PHP · Laravel · MySQL · UI Design · Bénin" />
+  <meta name="keywords" content="Osiax Tcheoubi, développeur Laravel Bénin, développeur PHP, freelance web Bénin, développeur full stack" />
+  <meta name="author" content="Osiax Tcheoubi" />
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Osiax Tcheoubi — Développeur Web Full Stack" />
+  <meta property="og:description" content="Développeur Full Stack spécialisé Laravel, PHP et solutions web modernes. Basé au Bénin, disponible pour des projets freelance." />
+  <meta property="og:image" content="images/osiax.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Osiax Tcheoubi — Développeur Web Full Stack | Laravel · PHP · Bénin</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPY3Y83GMG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,6 +27,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Données structurées pour le SEO (fiche Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Osiax Tcheoubi",
+    "jobTitle": "Développeur Web Full Stack",
+    "url": "https://osiax-dev.github.io/",
+    "email": "mailto:tcheoubiosiax@gmail.com",
+    "sameAs": [
+      "https://github.com/Osiax-dev",
+      "https://www.linkedin.com/in/osiax-dev",
+      "https://www.facebook.com/profile.php?id=61582790965956"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BJ"
+    }
+  }
+  </script>
+
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
     <input type="text"  name="nom" />
     <input type="email" name="email" />
@@ -26,11 +58,6 @@
 </head>
 <body>
 
-  <div class="cur cur-dot" id="cur-dot"></div>
-  <div class="cur cur-ring" id="cur-ring"></div>
-  <div class="glow" id="glow"></div>
-  <canvas id="particles" aria-hidden="true"></canvas>
-
   <!-- ══ NAV ══ -->
   <nav aria-label="Navigation principale">
     <div class="nav-brand">&lt;<span>dev</span>/&gt;</div>
@@ -38,7 +65,7 @@
       <li><a href="#about">À propos</a></li>
       <li><a href="#skills">Stack</a></li>
       <li><a href="#projects">Projets</a></li>
-      <li><a href="#cv">CV</a></li>
+      <li><a href="CV_Osiax_TCHEOUBI (1).pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -46,7 +73,7 @@
         <span class="dot-pulse"></span>
         Disponible · 🇧🇯
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <button class="nav-toggle menu-btn" id="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
     </div>
   </nav>
 
@@ -59,323 +86,1124 @@
   </div>
 
   <!-- ══ HERO ══ -->
-  <section class="hero" aria-label="Introduction">
-    <div class="hero-badge">
-      <span class="dot-pulse"></span>
-      Disponible pour missions &amp; collaborations
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="container">
+
+        <div class="hero-left">
+
+            <span class="hero-badge">
+                Disponible pour des projets Freelance
+            </span>
+
+            <h1>
+                Bonjour,
+                <br>
+                je suis
+                <span>Osiax Tcheoubi</span>
+            </h1>
+
+            <p class="hero-description">
+                Développeur Full Stack spécialisé en Laravel et PHP.
+                Je conçois des applications web modernes, rapides et
+                intuitives avec une attention particulière portée
+                à l'expérience utilisateur.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn-primary">
+                    Voir mes projets
+                </a>
+
+                <a href="#contact" class="btn-secondary">
+                    Me contacter
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat">
+
+                    <h3>3+</h3>
+
+                    <span>Applications réalisées</span>
+
+                </div>
+
+                <div class="stat">
+
+                    <h3>10+</h3>
+
+                    <span>Technologies maîtrisées</span>
+
+                </div>
+
+                <div class="stat">
+
+                    <h3>100%</h3>
+
+                    <span>Responsive</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <div class="hero-image">
+
+                <div class="hero-image-frame">
+
+                    <img src="images/osiax.png"
+                         alt="Osiax Tcheoubi, développeur web full stack">
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-    <p class="hero-eyebrow">// Bonjour, je suis</p>
-    <h1 class="hero-name">
-      Osiax<br>
-      <span class="hl">Tcheoubi</span><span class="caret">_</span>
-    </h1>
-    <p class="hero-role">Développeur Web Full Stack</p>
-    <p class="hero-desc">
-      Je conçois et développe des applications web robustes — du back-end PHP/Laravel à l'interface utilisateur — avec une approche orientée résultats et qualité de code.
-    </p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">→ Voir mes projets</a>
-      <a href="Osiax-Agossou-Missimahu-TCHEOUBI-CV.pdf" download class="btn btn-cv">⬇ CV</a>
-      <a href="https://wa.me/0148171199" target="_blank" rel="noopener" class="btn btn-wa">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.526 5.865L.057 23.761a.5.5 0 0 0 .614.614l5.896-1.469A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.692-.5-5.24-1.375l-.375-.219-3.882.968.985-3.77-.243-.389A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
-        </svg>
-        WhatsApp
-      </a>
-      <a href="https://www.linkedin.com/in/osiax-tcheoubi-b79684405" target="_blank" rel="noopener" class="btn btn-li">in LinkedIn</a>
-      <a href="#contact" class="btn btn-ghost">✉ Email</a>
+
+</section>
+
+<!-- ================= MARQUEE ================= -->
+
+<div class="marquee" role="presentation" aria-hidden="true">
+    <div class="marquee-track">
+        <span>Laravel</span>
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Groq API</span>
+        <span>Google Earth Engine</span>
+        <span>Open Meteo API</span>
+        <span>Git</span>
+        <span>Tailwind CSS</span>
+        <span>Laravel</span>
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Groq API</span>
+        <span>Google Earth Engine</span>
+        <span>Open Meteo API</span>
+        <span>Git</span>
+        <span>Tailwind CSS</span>
     </div>
-    <div class="hero-scroll" aria-hidden="true">
-      <div class="scroll-line"></div>
-      Défiler pour explorer
-    </div>
-  </section>
+</div>
 
   <!-- ══ 01 · À PROPOS ══ -->
-  <section id="about" aria-labelledby="about-title">
-    <p class="s-label reveal">01 · À propos</p>
-    <h2 class="s-title reveal" id="about-title">Qui suis-je ?</h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        Développeur web <strong>Full Stack</strong> basé à Parakou, Bénin — je construis des applications web complètes, de la base de données à l'interface, avec un code propre et maintenable.
-        <br><br>
-        Maîtrisant <strong>PHP, Laravel, MySQL</strong> côté back-end et <strong>HTML, CSS, JavaScript</strong> côté front, j'interviens sur des projets web concrets avec une vraie sensibilité pour le design et l'expérience utilisateur.
-        <br><br>
-        Mon objectif : livrer des solutions qui fonctionnent, qui durent, et qui répondent à de vraies <strong>problématiques métier</strong>.
-      </div>
-      <div class="about-card reveal">
-        <div class="acr">
-          <span class="acr-k">Rôle</span>
-          <span class="acr-v"><span class="tag-blue">Développeur Web Full Stack</span></span>
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>À propos</span>
+
+            <h2>
+                Je crée des applications
+                qui allient performance
+                et simplicité.
+            </h2>
+
         </div>
-        <div class="acr">
-          <span class="acr-k">Stack</span>
-          <span class="acr-v">PHP · Laravel · MySQL</span>
+
+
+        <div class="about-grid">
+
+            <!-- Colonne gauche -->
+            <div class="about-text">
+
+                <p>
+                    Je suis <strong>Osiax Tcheoubi</strong>, développeur
+                    Full Stack passionné par la création d'applications
+                    web modernes. J'aime concevoir des solutions
+                    performantes avec une attention particulière portée
+                    au design, à l'expérience utilisateur et à la qualité
+                    du code.
+                </p>
+
+                <p>
+                    Au fil de mes projets, j'ai développé des applications
+                    utilisant Laravel, PHP, MySQL, JavaScript et diverses
+                    API afin de proposer des solutions complètes répondant
+                    à des besoins concrets.
+                </p>
+
+                <p>
+                    Aujourd'hui, mon objectif est de collaborer sur des
+                    projets ambitieux tout en continuant à apprendre et à
+                    repousser mes limites techniques.
+                </p>
+
+            </div>
+
+
+            <!-- Colonne droite -->
+            <div class="about-card">
+
+                <div class="about-item">
+
+                    <span>Nom</span>
+
+                    <strong>Osiax Tcheoubi</strong>
+
+                </div>
+
+                <div class="about-item">
+
+                    <span>Spécialité</span>
+
+                    <strong>Développeur Full Stack</strong>
+
+                </div>
+
+                <div class="about-item">
+
+                    <span>Stack principale</span>
+
+                    <strong>Laravel • PHP • MySQL</strong>
+
+                </div>
+
+                <div class="about-item">
+
+                    <span>Localisation</span>
+
+                    <strong>Bénin</strong>
+
+                </div>
+
+                <div class="about-item">
+
+                    <span>Disponibilité</span>
+
+                    <strong>Disponible pour des projets</strong>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="acr">
-          <span class="acr-k">Localisation</span>
-          <span class="acr-v">📍 Parakou, 🇧🇯 Bénin</span>
+
+
+        <div class="about-numbers">
+
+            <div>
+
+                <h3>3+</h3>
+
+                <p>Applications réalisées</p>
+
+            </div>
+
+            <div>
+
+                <h3>10+</h3>
+
+                <p>Technologies utilisées</p>
+
+            </div>
+
+            <div>
+
+                <h3>2026</h3>
+
+                <p>Licence en Informatique</p>
+
+            </div>
+
+            <div>
+
+                <h3>100%</h3>
+
+                <p>Responsive Design</p>
+
+            </div>
+
         </div>
-        <div class="acr">
-          <span class="acr-k">Email</span>
-          <span class="acr-v">tcheoubiosiax@gmail.com</span>
-        </div>
-        <div class="acr">
-          <span class="acr-k">Disponibilité</span>
-          <span class="acr-v"><span class="tag-blue">Ouvert aux projets</span></span>
-        </div>
-        <a href="https://wa.me/0148171199" target="_blank" rel="noopener"
-           class="btn btn-wa" style="width:100%; justify-content:center; margin-top:12px;">
-          💬 Me contacter
-        </a>
-      </div>
+
     </div>
-  </section>
+
+</section>
 
   <!-- ══ 02 · COMPÉTENCES ══ -->
-  <section class="skills-wrap" id="skills" aria-labelledby="skills-title">
-    <p class="s-label reveal">02 · Compétences</p>
-    <h2 class="s-title reveal" id="skills-title">Stack & Expertise</h2>
+<!-- ================= SKILLS ================= -->
 
-    <p class="skills-cat reveal">// Développement web</p>
-    <div class="tech-grid reveal">
+<section id="skills" class="skills">
 
-      <div class="tech-card">
-        <span class="tech-icon" aria-hidden="true">🐘</span>
-        <div class="tech-name">PHP</div>
-        <div class="tech-level">Maîtrisé · 80%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="80"></div></div>
-        <div class="tech-desc">Back-end, sessions, CRUD, PDO, architecture MVC, sécurité.</div>
-      </div>
+    <div class="container">
 
-      <div class="tech-card">
-        <span class="tech-icon" aria-hidden="true">⚙️</span>
-        <div class="tech-name">Laravel</div>
-        <div class="tech-level">Maîtrisé · 75%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="75"></div></div>
-        <div class="tech-desc">Blade, Eloquent ORM, routing, middleware, Artisan, API REST.</div>
-      </div>
+        <div class="section-title">
 
-      <div class="tech-card">
-        <span class="tech-icon" aria-hidden="true">🗄️</span>
-        <div class="tech-name">SQL / MySQL</div>
-        <div class="tech-level">Maîtrisé · 82%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="82"></div></div>
-        <div class="tech-desc">Requêtes complexes, jointures, modélisation Merise, MCD/MLD.</div>
-      </div>
+            <span>Compétences</span>
 
-      <div class="tech-card">
-        <span class="tech-icon" aria-hidden="true">🌐</span>
-        <div class="tech-name">HTML</div>
-        <div class="tech-level">Avancé · 90%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="90"></div></div>
-        <div class="tech-desc">Structure sémantique, HTML5, accessibilité, formulaires avancés.</div>
-      </div>
+            <h2>
+                Les technologies avec lesquelles
+                je construis mes applications.
+            </h2>
 
-      <div class="tech-card">
-        <span class="tech-icon" aria-hidden="true">✦</span>
-        <div class="tech-name">CSS</div>
-        <div class="tech-level">Avancé · 85%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="85"></div></div>
-        <div class="tech-desc">Flexbox, Grid, responsive design, animations, variables CSS.</div>
-      </div>
+            <p>
+                J'utilise des outils modernes pour concevoir des applications
+                fiables, évolutives et centrées sur l'expérience utilisateur.
+            </p>
 
-      <div class="tech-card">
-        <span class="tech-icon" aria-hidden="true">⚡</span>
-        <div class="tech-name">JavaScript</div>
-        <div class="tech-level">Intermédiaire · 65%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="65"></div></div>
-        <div class="tech-desc">DOM, ES6+, fetch API, logique applicative, interactivité.</div>
-      </div>
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- Développement Backend -->
+            <div class="skill-card">
+
+                <h3>Backend</h3>
+
+                <p>
+                    Développement d'applications robustes,
+                    architecture MVC, APIs REST et gestion
+                    des bases de données.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>Laravel</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>REST API</span>
+                    <span>Composer</span>
+
+                </div>
+
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-card">
+
+                <h3>Frontend</h3>
+
+                <p>
+                    Création d'interfaces modernes,
+                    responsives et fluides.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>Bootstrap</span>
+
+                </div>
+
+            </div>
+
+            <!-- Outils -->
+            <div class="skill-card">
+
+                <h3>Outils</h3>
+
+                <p>
+                    Gestion du code, déploiement
+                    et environnement de développement.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>VS Code</span>
+                    <span>Figma</span>
+                    <span>XAMPP</span>
+
+                </div>
+
+            </div>
+
+            <!-- IA -->
+            <div class="skill-card">
+
+                <h3>Intelligence Artificielle</h3>
+
+                <p>
+                    Intégration de services IA,
+                    traitement de données et automatisation.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>Python</span>
+                    <span>OpenAI</span>
+                    <span>Groq</span>
+                    <span>Google Earth Engine</span>
+                    <span>Open Meteo API</span>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <p class="skills-cat reveal" style="margin-top:52px;">// Design & Management</p>
-    <div class="tech-grid tech-grid-3 reveal">
-
-      <div class="tech-card tech-card-accent">
-        <div class="tech-card-line"></div>
-        <span class="tech-icon" aria-hidden="true">◈</span>
-        <div class="tech-name">UI Design</div>
-        <div class="tech-level">Intermédiaire · 65%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="65"></div></div>
-        <div class="tech-desc">Conception d'interfaces, maquettes, wireframing, design system, expérience utilisateur.</div>
-        <div class="tech-tags">
-          <span class="ttag">Figma</span>
-          <span class="ttag">Wireframe</span>
-          <span class="ttag">UX</span>
-        </div>
-      </div>
-
-      <div class="tech-card tech-card-accent">
-        <div class="tech-card-line"></div>
-        <span class="tech-icon" aria-hidden="true">◎</span>
-        <div class="tech-name">Analyse de données</div>
-        <div class="tech-level">Intermédiaire · 70%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="70"></div></div>
-        <div class="tech-desc">Collecte, traitement et visualisation de données pour appuyer la prise de décision.</div>
-        <div class="tech-tags">
-          <span class="ttag">SQL</span>
-          <span class="ttag">Reporting</span>
-          <span class="ttag">KPI</span>
-        </div>
-      </div>
-
-      <div class="tech-card tech-card-accent">
-        <div class="tech-card-line"></div>
-        <span class="tech-icon" aria-hidden="true">◐</span>
-        <div class="tech-name">Gestion de projet</div>
-        <div class="tech-level">Intermédiaire · 72%</div>
-        <div class="bar-bg"><div class="bar-fill" data-w="72"></div></div>
-        <div class="tech-desc">Planification, suivi des jalons, coordination d'équipe, méthodes agiles.</div>
-        <div class="tech-tags">
-          <span class="ttag">Agile</span>
-          <span class="ttag">Gantt</span>
-          <span class="ttag">Trello</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
+</section>
 
   <!-- ══ 03 · PROJETS ══ -->
-  <section id="projects" aria-labelledby="projects-title">
-    <p class="s-label reveal">03 · Projets</p>
-    <h2 class="s-title reveal" id="projects-title">Réalisations</h2>
-    <div class="proj-list reveal">
+<!-- ================= PROJECTS ================= -->
 
-      <div class="proj-item">
-        <span class="proj-num">001</span>
-        <div>
-          <div class="proj-name">Système de gestion de bibliothèque</div>
-          <div class="proj-tags">
-            <span class="proj-tag g">PHP</span>
-            <span class="proj-tag g">MySQL</span>
-            <span class="proj-tag g">HTML/CSS</span>
-            <span class="proj-tag">CRUD</span>
-            <span class="proj-tag">Login</span>
-          </div>
-        </div>
-        <span class="proj-arrow" aria-hidden="true">→</span>
-      </div>
+<section id="projects" class="projects">
 
-      <div class="proj-item">
-        <span class="proj-num">002</span>
-        <div>
-          <div class="proj-name">Site vitrine responsive</div>
-          <div class="proj-tags">
-            <span class="proj-tag g">HTML</span>
-            <span class="proj-tag g">CSS</span>
-            <span class="proj-tag g">JavaScript</span>
-            <span class="proj-tag">Responsive</span>
-          </div>
-        </div>
-        <span class="proj-arrow" aria-hidden="true">→</span>
-      </div>
+    <div class="container">
 
-      <div class="proj-item">
-        <span class="proj-num">003</span>
-        <div>
-          <div class="proj-name">Modélisation base de données</div>
-          <div class="proj-tags">
-            <span class="proj-tag g">SQL</span>
-            <span class="proj-tag g">MySQL</span>
-            <span class="proj-tag">Merise</span>
-            <span class="proj-tag">MCD/MLD</span>
-          </div>
+        <div class="section-title">
+
+            <span>Mes réalisations</span>
+
+            <h2>
+                Des projets conçus pour résoudre
+                des problèmes réels.
+            </h2>
+
+            <p>
+                Chaque application est développée avec un souci de performance,
+                d'expérience utilisateur et de qualité du code.
+            </p>
+
         </div>
-        <span class="proj-arrow" aria-hidden="true">→</span>
-      </div>
+
+        <!-- ================= Projet 1 ================= -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <img src="images/projects/agripredict.png"
+                     alt="Capture d'écran du projet AgriPredict AI">
+
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    Intelligence Artificielle
+                </span>
+
+                <h3>
+                    AgriPredict AI
+                </h3>
+
+                <p>
+                    Une plateforme intelligente permettant de prédire les
+                    rendements agricoles à partir des données météorologiques,
+                    satellitaires et de modèles d'intelligence artificielle.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>Laravel</span>
+                    <span>PHP</span>
+                    <span>Python</span>
+                    <span>MySQL</span>
+                    <span>Google Earth Engine</span>
+                    <span>Open Meteo API</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="https://agripredict.idrisshouse.com/" class="btn-primary">
+                        Voir le projet
+                    </a>
+
+                    <a href="https://github.com/Osiax-dev" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+        <!-- ================= Projet 4 ================= -->
+
+<article class="project reverse">
+
+    <div class="project-image">
+
+        <img src="images/projects/velomax.png"
+             alt="Capture d'écran du site VéloMax">
 
     </div>
-  </section>
 
-  <!-- ══ 04 · CV ══ -->
-  <section class="cv-section" id="cv" aria-labelledby="cv-title">
-    <p class="s-label reveal">04 · Curriculum Vitae</p>
-    <h2 class="s-title reveal" id="cv-title">Mon CV</h2>
-    <div class="cv-inner reveal">
-      <div>
-        <p class="cv-desc">
-          Télécharge mon CV complet pour découvrir mon parcours, mes compétences et mes réalisations.
+    <div class="project-content">
+
+        <span class="project-category">
+            E-commerce
+        </span>
+
+        <h3>
+            VéloMax
+        </h3>
+
+        <p>
+            Une boutique(Vitrine et pas encore totalement fonctionnel)en ligne dédiée à la vente de vélos de route, VTT, gravel
+            et e-bikes, avec mise en avant des nouveautés, argumentaire de confiance
+            (livraison, garantie, retours) et parcours d'achat simplifié.
         </p>
-        <div class="cv-actions">
-          <a href="Osiax-Agossou-Missimahu-TCHEOUBI-CV.pdf" download class="btn btn-primary">⬇ Télécharger le CV (PDF)</a>
-          <a href="Osiax-Agossou-Missimahu-TCHEOUBI-CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost">👁 Aperçu</a>
-        </div>
-      </div>
-      <div class="about-card" style="border-color:rgba(37,99,235,0.25);">
-        <div class="acr"><span class="acr-k">Nom</span><span class="acr-v">Osiax Tcheoubi</span></div>
-        <div class="acr"><span class="acr-k">Rôle</span><span class="acr-v"><span class="tag-blue">Développeur Web Full Stack</span></span></div>
-        <div class="acr"><span class="acr-k">Localisation</span><span class="acr-v">Parakou · 🇧🇯</span></div>
-        <div class="acr"><span class="acr-k">Email</span><span class="acr-v">tcheoubiosiax@gmail.com</span></div>
-        <div class="acr"><span class="acr-k">Format</span><span class="acr-v"><span class="tag-blue">PDF · A4</span></span></div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ══ 05 · CONTACT ══ -->
-  <section class="contact-wrap" id="contact" aria-labelledby="contact-title">
-    <p class="s-label reveal">05 · Contact</p>
-    <h2 class="s-title reveal" id="contact-title">Travaillons ensemble</h2>
-    <div class="contact-grid">
-      <div class="reveal">
-        <p class="contact-intro">
-          Tu as un projet web à lancer, une interface à concevoir, ou tu cherches un développeur fiable ? Écris-moi.
-        </p>
-        <div class="clinks">
-          <a href="https://wa.me/0148171199" target="_blank" rel="noopener" class="clink">
-            <span class="ci">💬</span>
-            <span class="cl">WhatsApp<span class="cs">Réponse rapide · +229 0148171199</span></span>
-            <span class="ca">↗</span>
-          </a>
-          <a href="https://www.linkedin.com/in/osiax-tcheoubi-b79684405" target="_blank" rel="noopener" class="clink">
-            <span class="ci">💼</span>
-            <span class="cl">LinkedIn<span class="cs">Profil professionnel</span></span>
-            <span class="ca">↗</span>
-          </a>
-          <a href="mailto:tcheoubiosiax@gmail.com" class="clink">
-            <span class="ci">✉</span>
-            <span class="cl">Email<span class="cs">tcheoubiosiax@gmail.com</span></span>
-            <span class="ca">↗</span>
-          </a>
-        </div>
-      </div>
-      <div class="reveal">
-        <form id="contact-form" class="netlify-form" action="https://formspree.io/f/xlgzkayj" method="POST" novalidate>
-          <input type="hidden" name="form-name" value="contact" />
-          <div style="display:none;"><label>Ne pas remplir : <input name="bot-field" /></label></div>
-          <div class="fg">
-            <label class="fl" for="nom">Nom complet</label>
-            <input class="fi" id="nom" name="nom" type="text" placeholder="Jean Dupont" required autocomplete="name" />
-          </div>
-          <div class="fg">
-            <label class="fl" for="email">Email</label>
-            <input class="fi" id="email" name="email" type="email" placeholder="jean@exemple.com" required autocomplete="email" />
-          </div>
-          <div class="fg">
-            <label class="fl" for="sujet">Sujet</label>
-            <input class="fi" id="sujet" name="sujet" type="text" placeholder="Projet web, collaboration, mission..." required />
-          </div>
-          <div class="fg">
-            <label class="fl" for="message">Message</label>
-            <textarea class="ft" id="message" name="message" placeholder="Décris ton projet ou ta demande..." required></textarea>
-          </div>
-          <button type="submit" class="fsub" id="form-submit">→ Envoyer le message</button>
-          <div class="form-msg success" id="form-success">✓ Message envoyé ! Je te réponds bientôt.</div>
-          <div class="form-msg error" id="form-error">✗ Une erreur est survenue. Contacte-moi directement sur WhatsApp.</div>
-        </form>
-      </div>
-    </div>
-  </section>
+        <div class="project-tech">
 
-  <!-- ══ FOOTER ══ -->
-  <footer>
-    <span>© 2026 · Osiax Tcheoubi · Parakou 🇧🇯</span>
-    <span><span class="dot-pulse"></span> Disponible — Projets &amp; Missions</span>
-    <span>PHP · Laravel · MySQL · JS · CSS</span>
-  </footer>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="https://velomax.netlify.app/" class="btn-primary">
+                Voir le projet
+            </a>
+
+            <a href="https://github.com/Osiax-dev" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
+        <!-- ================= Projet 2 ================= -->
+
+        <article class="project reverse">
+
+            <div class="project-image">
+
+                <img src="images/projects/orientation.png"
+                     alt="Capture d'écran de la plateforme d'orientation">
+
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    Plateforme Web
+                </span>
+
+                <h3>
+                    Plateforme d'Orientation
+                </h3>
+
+                <p>
+                    Une plateforme permettant aux étudiants de découvrir
+                    les différentes formations, consulter les programmes
+                    et déposer leurs candidatures en ligne.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>Laravel</span>
+                    <span>MySQL</span>
+                    <span>JavaScript</span>
+                    <span>Tailwind CSS</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="#" class="btn-primary">
+                        Voir le projet
+                    </a>
+
+                    <a href="https://github.com/Osiax-dev" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- ================= Projet 3 ================= -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <img src="images/projects/dashboard.png"
+                     alt="Capture d'écran du tableau de bord analytique">
+
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    Dashboard
+                </span>
+
+                <h3>
+                    Tableau de Bord Analytique
+                </h3>
+
+                <p>
+                    Interface moderne permettant de suivre les indicateurs,
+                    visualiser les données en temps réel et gérer les
+                    utilisateurs d'une application.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>Laravel</span>
+                    <span>Chart.js</span>
+                    <span>MySQL</span>
+                    <span>JavaScript</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="#" class="btn-primary">
+                        Voir le projet
+                    </a>
+
+                    <a href="https://github.com/Osiax-dev" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+<!-- ================= WHY ME ================= -->
+
+<section id="why-me" class="why-me">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Pourquoi moi ?</span>
+
+            <h2>
+                Plus qu'un développeur,
+                un partenaire pour vos projets.
+            </h2>
+
+            <p>
+                Mon objectif n'est pas seulement de développer une application,
+                mais de proposer une solution fiable, évolutive et agréable à utiliser.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <span class="why-number">01</span>
+
+                <h3>Code propre</h3>
+
+                <p>
+                    J'accorde une grande importance à une architecture claire,
+                    un code maintenable et des bonnes pratiques de développement.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <span class="why-number">02</span>
+
+                <h3>Performance</h3>
+
+                <p>
+                    Chaque projet est optimisé pour offrir un chargement rapide,
+                    une navigation fluide et une excellente expérience utilisateur.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <span class="why-number">03</span>
+
+                <h3>Design moderne</h3>
+
+                <p>
+                    J'aime créer des interfaces élégantes, intuitives et adaptées
+                    à tous les types d'écrans.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <span class="why-number">04</span>
+
+                <h3>Technologies actuelles</h3>
+
+                <p>
+                    Laravel, PHP, JavaScript, APIs, IA et outils modernes
+                    sont au cœur des solutions que je développe.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <span class="why-number">05</span>
+
+                <h3>Évolutivité</h3>
+
+                <p>
+                    Je développe des applications pensées pour évoluer facilement
+                    selon les besoins futurs.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <span class="why-number">06</span>
+
+                <h3>Collaboration</h3>
+
+                <p>
+                    Je privilégie une communication simple, transparente
+                    et un suivi régulier tout au long du projet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= PROCESS ================= -->
+
+<section id="process" class="process">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Ma méthode</span>
+
+            <h2>
+                Une approche simple,
+                structurée et efficace.
+            </h2>
+
+            <p>
+                Chaque projet suit un processus clair afin de garantir un résultat
+                de qualité, dans les délais et conforme aux attentes.
+            </p>
+
+        </div>
+
+        <div class="timeline">
+
+            <!-- Étape 1 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    01
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>Découverte</span>
+
+                    <h3>
+                        Comprendre votre besoin
+                    </h3>
+
+                    <p>
+                        Nous échangeons sur votre projet, vos objectifs,
+                        vos utilisateurs et les fonctionnalités attendues.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Étape 2 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    02
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>Conception</span>
+
+                    <h3>
+                        Imaginer la meilleure solution
+                    </h3>
+
+                    <p>
+                        Je définis l'architecture, la base de données,
+                        l'interface utilisateur et les choix techniques.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Étape 3 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    03
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>Développement</span>
+
+                    <h3>
+                        Construire l'application
+                    </h3>
+
+                    <p>
+                        Le projet est développé avec des technologies modernes
+                        en privilégiant la performance, la sécurité et
+                        la maintenabilité.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Étape 4 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    04
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>Tests</span>
+
+                    <h3>
+                        Vérifier chaque détail
+                    </h3>
+
+                    <p>
+                        Chaque fonctionnalité est testée afin d'assurer
+                        une expérience utilisateur fluide et sans erreur.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Étape 5 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    05
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>Livraison</span>
+
+                    <h3>
+                        Mise en ligne et accompagnement
+                    </h3>
+
+                    <p>
+                        Une fois l'application prête, elle est déployée
+                        puis je reste disponible pour les évolutions
+                        et le support.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <span class="cta-badge">
+                Disponible pour de nouveaux projets
+            </span>
+
+
+            <h2>
+                Vous avez une idée ?
+                <br>
+                Construisons-la ensemble.
+            </h2>
+
+
+            <p>
+                Que ce soit une application web, une plateforme métier,
+                un tableau de bord ou une solution basée sur l'intelligence
+                artificielle, je peux vous accompagner de la conception
+                jusqu'à la mise en production.
+            </p>
+
+
+            <div class="cta-buttons">
+
+                <a href="#contact" class="btn-primary">
+                    Démarrer un projet
+                </a>
+
+
+                <a href="#projects" class="btn-secondary">
+                    Voir mes réalisations
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  
+
+
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Contact</span>
+
+            <h2>
+                Discutons de votre projet.
+            </h2>
+
+            <p>
+                Je réponds généralement sous 24 heures.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <!-- Informations -->
+
+            <div class="contact-info">
+
+                <h3>
+                    Restons en contact
+                </h3>
+
+                <p>
+                    Vous recherchez un développeur Full Stack pour
+                    concevoir une application moderne ou améliorer
+                    un projet existant ?
+                </p>
+
+                <div class="contact-item">
+
+                    <small>Email</small>
+
+                    <strong>
+                        <a href="mailto:tcheoubiosiax@gmail.com">tcheoubiosiax@gmail.com</a>
+                    </strong>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <small>WhatsApp</small>
+
+                    <strong>
+                        <a href="https://wa.me/2290161879221" target="_blank" rel="noopener noreferrer">+229 01 61 87 92 21</a>
+                    </strong>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <small>Localisation</small>
+
+                    <strong>
+                        Bénin
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Formulaire -->
+
+            <form class="contact-form">
+
+                <input
+                    type="text"
+                    placeholder="Votre nom">
+
+                <input
+                    type="email"
+                    placeholder="Adresse email">
+
+                <input
+                    type="text"
+                    placeholder="Sujet">
+
+                <textarea
+                    rows="6"
+                    placeholder="Parlez-moi de votre projet..."></textarea>
+
+                <button class="btn-primary">
+
+                    Envoyer le message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div>
+
+                <h3>
+                    Osiax Tcheoubi
+                </h3>
+
+                <p>
+                    Développeur Full Stack spécialisé Laravel,
+                    PHP et solutions web modernes.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Accueil</a>
+
+                <a href="#about">À propos</a>
+
+                <a href="#projects">Projets</a>
+
+                <a href="#skills">Compétences</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span class="year">2026</span> Osiax Tcheoubi.
+                Tous droits réservés.
+            </span>
+
+            <div class="footer-social">
+
+                <a href="https://github.com/Osiax-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.17 0 1.57-.02 2.83-.02 3.22 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+                    <span>GitHub</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/osiax-dev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61582790965956" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5h1.65V3.7c-.29-.04-1.27-.12-2.4-.12-2.38 0-4.01 1.45-4.01 4.11v2.3H7.6V13h2.7v8h3.2Z"/></svg>
+                    <span>Facebook</span>
+                </a>
+
+                <a href="mailto:tcheoubiosiax@gmail.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                    <span>Email</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
 
   <script src="script.js"></script>
 </body>
