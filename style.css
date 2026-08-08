@@ -41,7 +41,18 @@
     --font-mono:'JetBrains Mono',monospace;
 
 }
+#form-status {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
 
+#form-status.success {
+    color: #22c55e;
+}
+
+#form-status.error {
+    color: #ef4444;
+}
 
 /* =====================================================
    RESET

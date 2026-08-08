@@ -369,3 +369,45 @@ projectImages.forEach(img=>{
 
 
 });
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours...';
+    status.textContent = '';
+    status.className = '';
+
+    try {
+        const response = await fetch('https://formspree.io/f/xwlevrwj', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            status.textContent = 'Message envoyé avec succès ! Je vous répondrai bientôt.';
+            status.className = 'success';
+            form.reset();
+        } else {
+            const data = await response.json();
+            if (data.errors) {
+                status.textContent = data.errors.map(err => err.message).join(', ');
+            } else {
+                status.textContent = "Une erreur s'est produite. Veuillez réessayer.";
+            }
+            status.className = 'error';
+        }
+    } catch (error) {
+        status.textContent = "Impossible d'envoyer le message. Vérifiez votre connexion.";
+        status.className = 'error';
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer le message';
+    }
+});

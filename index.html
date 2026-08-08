@@ -994,31 +994,40 @@
 
             <!-- Formulaire -->
 
-            <form class="contact-form">
+<form class="contact-form" id="contact-form">
 
-                <input
-                    type="text"
-                    placeholder="Votre nom">
+    <input
+        type="text"
+        name="nom"
+        placeholder="Votre nom"
+        required>
 
-                <input
-                    type="email"
-                    placeholder="Adresse email">
+    <input
+        type="email"
+        name="email"
+        placeholder="Adresse email"
+        required>
 
-                <input
-                    type="text"
-                    placeholder="Sujet">
+    <input
+        type="text"
+        name="sujet"
+        placeholder="Sujet">
 
-                <textarea
-                    rows="6"
-                    placeholder="Parlez-moi de votre projet..."></textarea>
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Parlez-moi de votre projet..."
+        required></textarea>
 
-                <button class="btn-primary">
+    <input type="text" name="_gotcha" style="display:none">
 
-                    Envoyer le message
+    <button class="btn-primary" type="submit">
+        Envoyer le message
+    </button>
 
-                </button>
+    <p id="form-status"></p>
 
-            </form>
+</form>
 
         </div>
 
